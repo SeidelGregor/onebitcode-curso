@@ -1,0 +1,21 @@
+body{
+    background-color: #909090;
+}
+.post-container{
+    width: 70%;
+    margin: 0px auto;
+    background-color: #fffafa;
+}
+.post{
+    padding: 20px 30px;
+}
+.date{
+    font-family: 'Times New Roman', Times, serif;
+    color: #008080;
+}
+.post-content{
+    font-family: Courier, monospace;
+}
+h1{
+    font-family: Georgia, serif;
+}

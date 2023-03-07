@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Formulario</h1>
+    <form>
+        <div>
+            <label>Nome: </label>
+            <input type="text" name="nome" id="nome" class="nomeCompleto">
+            <label>Sobrenome: </label>
+            <input type="text" name="sobrenome" id="sobrenome" class="nomeCompleto">
+        </div>
+        <div>
+            <label>Especialidade: </label>
+            <input type="radio" value="front-end" name="especialidade" class="especialidade">front end
+            <input type="radio" value="back-end" name="especialidade" class="especialidade">back end
+            <input type="radio" value="fullstack" name="especialidade" class="especialidade">fullstack
+            <input type="radio" value="mobile" name="especialidade" class="especialidade">mobile
+            <input type="radio" value="generalista" name="especialidade" class="especialidade" checked>generalista
+        </div>
+        <div>
+            <label>Experiencia</label>
+            <select class="experiencia">
+                <option value="junior">Junior</option>
+                <option value="pleno">Pleno</option>
+                <option value="senior">Senior</option>
+            </select>
+        </div>
+        <div>
+            <label>Tecnologias</label>
+            <input type="checkbox" value="js" name="tecnologias" class="tecnologias">Javascript
+            <input type="checkbox" value="html" name="tecnologias" class="tecnologias">HTML
+            <input type="checkbox" value="css" name="tecnologias" class="tecnologias">CSS
+            <input type="checkbox" value="java" name="tecnologias" class="tecnologias">Java
+            <input type="checkbox" value="c#" name="tecnologias" class="tecnologias">C#
+            <input type="checkbox" value="python" name="tecnologias" class="tecnologias">Python
+            <input type="checkbox" value="php" name="tecnologias" class="tecnologias">PHP
+            <input type="checkbox" value="ruby" name="tecnologias" class="tecnologias">Ruby
+            <input type="checkbox" value="outra(s)" name="tecnologias" class="tecnologias">Outra(s)
+        </div>
+        <button type="button" onclick="mostrar()">enviar</button>
+        <p id="informacoes"></p>
+    </form>
+    <script src="formulario.js"></script>
+</body>
+
+</html>

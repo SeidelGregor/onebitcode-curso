@@ -1,0 +1,3 @@
+quando this é usado em uma função padrão (mesmo que anonima), 
+ele vai fazer referencia ao objeto que criou a função.
+Já uma arrowFunction vai fazer referencia ao objeto que a chamou.

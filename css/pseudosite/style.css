@@ -1,0 +1,41 @@
+body{
+   background-image: url('https://img.olhardigital.com.br/wp-content/uploads/2020/12/espaco-sideral-viktorovpro-shutterstock-695x500.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: #FFFFFF;
+}
+h1{
+    text-align: center;
+}
+h4{
+    color:#f1c40f;
+    margin-bottom: 0px;
+}
+h2{
+
+    color: #000000;
+    width: 298px;
+    border: 1px solid;
+    background-color: #f1c40fc0;
+    text-align: center;
+}
+.Dias-semana{
+    width: 65px;
+    padding-bottom: 3px;
+    border: 1px solid;
+    margin-top: 2px;
+    background-color: #00000055;
+}
+.materias{
+    margin: auto;
+    width: 300px;
+    border: 1px solid;
+    background-color: #00000055;
+}
+.text-red{
+    color:#e74c3c;
+}
+#horarios{
+    width: 120px;
+    margin: 50px auto 50px auto;
+}

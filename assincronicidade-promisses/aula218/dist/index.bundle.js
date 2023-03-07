@@ -1,0 +1,1 @@
+(()=>{var e=setTimeout((function(){console.log("setTimeout")}),2e3);clearTimeout(e);var o=1,t=setInterval((function(){console.log("".concat(o," segundo(s)")),o>=10?clearInterval(t):o++}),1e3)})();

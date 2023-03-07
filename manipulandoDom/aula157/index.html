@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="manipulando_atributos.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="estado" onchange="mudarEstado()">
+        <input type="radio" value="habilitado" name="estado" checked>Habilitado
+        <input type="radio" value="desabilitado" name="estado">Desabilitado
+    </div>
+    <div id="visivel" style="display: block;">
+        <label>Texto: </label>
+        <input type="text">
+    </div>
+    <p id="mostrar" style="display: none;">Input desabilitado</p>
+</body>
+</html>

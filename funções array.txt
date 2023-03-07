@@ -1,0 +1,39 @@
+pop() => retira o ultimo elemento do array, retorna o valor daquele array
+
+push('elemento') => adiciona um elemento no final do array
+
+shift() => retira o primeiro elemento do array, retorna o valor daquele array
+
+unshift('elemento') => adiciona um elemento no inicio do array
+
+indexOf("elemento") => retorna a possição de um determinado elemento, se o elemento não for encontrado retorna -1
+
+splice(inicio, quantosQuerDeletar, novoElemento, ..., novoElementoN) => deleta elementos de um array a partir do valor indicado do inicio (único parametro obrigatorio) e adiciona novos elementos a partir desse inicio
+
+slice(inicio, fim) => extrai os elementos do array sem alterar o original no intervalo do inicio até o fim -1
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+funções de iteração
+são funções HOf que retornam o callback em todos os elementos do array
+seguem o seguinte modelo:
+
+
+
+		array.funcaoDeIterar(function(elementoAtual, indice, array){
+			/*corpo da função*/
+		})
+
+
+
+forEach() => retorna o callback para cada um dos elementos que ele passar
+
+map() => modifica os elementos do array sem alterar o original, já que ele vai retornar o elemento modificado
+
+filter() => filtra os elementos de um array com testes booleanos
+
+find() => retorna o primeiro elemento que atende a condição requisitada
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

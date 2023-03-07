@@ -1,0 +1,21 @@
+body{
+    background-image: url('https://img.freepik.com/fotos-gratis/arte-de-fundo-de-areia-de-pedras-zen-empilhadas-do-conceito-de-equilibrio_53876-110628.jpg?w=2000');
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+h1{
+    text-align: center;
+    font-size: 70px;
+    color: #000000;
+}
+ul{
+    margin-top: 2px;
+    width: 70px;
+    color: #3232b6;
+    border-width: 1px;
+    border-style: groove;
+    border-color: #3232b61a;
+}
+p{
+    font-size: 20px;
+}

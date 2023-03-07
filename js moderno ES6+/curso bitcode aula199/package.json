@@ -1,0 +1,19 @@
+{
+  "name": "classe_npm",
+  "version": "1.0.0",
+  "description": "Estudando npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "classe",
+    "estudo"
+  ],
+  "author": "Gregor Seidel Giongo",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}

@@ -1,0 +1,1 @@
+!function(n,e,o){new Promise((function(e,o){var c=1,l=0,a=setInterval((function(){l=n+9.8,c>=3.5?(console.log("Velociade final é ".concat(l,"m/s")),clearInterval(a),e()):(n=l,c++)}),1e3)}))}(0),console.log("acelerando");

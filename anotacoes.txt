@@ -1,0 +1,6 @@
+com querySelector e querySelectorAll
+    tag = código da tag (p, ul, li, etc)
+    id = #
+    class = .
+querySelector seleciona o primeiro elemento com a descrição passada 
+enquanto querySelectorAll seleciona todos

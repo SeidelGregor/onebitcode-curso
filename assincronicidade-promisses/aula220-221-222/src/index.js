@@ -1,25 +1,29 @@
 function aceleracao(velocidadeInicial, tempo, aceleracao) {
-    new Promise(function (resolve, reject) {
+    return new Promise(function (resolve, reject) {
         if (tempo > 0 && aceleracao > 0) {
-            let segundos = 1;
-            let v = 0;
-            const setIntervalId = setInterval(() => {
-                v = velocidadeInicial + aceleracao;
+            let segundos = 0;
+            let velocidadeAtual = velocidadeInicial;
+            const intervalId = setInterval(() => {
+                velocidadeAtual += aceleracao;
+                segundos++;
                 if (segundos >= tempo) {
-                    console.log(`Velociade final é ${v}m/s`); 
-                    clearInterval(setIntervalId);
-                    resolve();
-                } else {
-                    velocidadeInicial = v; 
-                    segundos++; 
+                    clearInterval(intervalId);
+                    resolve(`Velociade final é ${velocidadeAtual.toFixed(2)}m/s`);
                 }
             }, 1000);
                
         } else {
-            reject("Manteve a velocidade");
+            const erro = {
+                mensagem:"Não ouve aceleração",
+                codigo: 1 //código para quando não ouver aceleração
+            };
+            reject(erro);
         }
     });
 }
 
-aceleracao(0, 3.5, 9.8);
-console.log("acelerando");
+aceleracao(0, 0, 9.8).then(velocidadeFinal => {
+    console.log(velocidadeFinal);
+}).catch(erro => {
+    console.error(`Erro: ${erro.mensagem}. Código: ${erro.codigo}`)
+});

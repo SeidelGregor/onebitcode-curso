@@ -27,7 +27,6 @@ class motorDecolagem {
     testarEscudo() {
         return new Promise((resolve, reject) => {
             const escudo = this.nave.escudo;
-            //console.log(escudo);
             if (escudo * 2 < 100) {
                 reject(`${this.nave.nome}: carga de escudo insuficiente`);
             } else {

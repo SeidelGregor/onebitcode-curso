@@ -1,21 +1,25 @@
 body{
-    background-color: #909090;
+    background-color: #0a0a0a;
 }
 .post-container{
     width: 70%;
     margin: 0px auto;
-    background-color: #fffafa;
+    background-color:  #3d3838;
 }
 .post{
     padding: 20px 30px;
 }
 .date{
     font-family: 'Times New Roman', Times, serif;
-    color: #008080;
+    font-size: 11px;
+    color:  #816666;
 }
 .post-content{
     font-family: Courier, monospace;
+    color: #ffd8d8;
 }
 h1{
     font-family: Georgia, serif;
+    text-align: center;
+    color: #8f2121;
 }

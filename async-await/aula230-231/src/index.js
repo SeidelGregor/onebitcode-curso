@@ -20,13 +20,25 @@ async function atirar(x, y, z) {
   return ([x, y, z]);
 }
 
-function moverAtirando(x, y, z) {
-  ajustarPosicao(x, y, z).then(coordenadas => {
-    console.log(`Arma ajustada para as coordenadas (${coordenadas[0]}, ${coordenadas[1]}, ${coordenadas[2]})`);
-    return atirar(...coordenadas);
-  }).then(coordenadas => {
-    console.log(`Começando a atirar nas coordenadas (${coordenadas[0]}, ${coordenadas[1]}, ${coordenadas[2]})`);
-  }).catch(erro => { console.log(erro); });
+function recarregar(){
+  return new Promise ((resolve) =>{
+    setTimeout(() =>{
+      resolve("Recarga bem sucesida");
+    }, 2500);
+  });
+}
+
+async function moverAtirando(x, y, z) {
+  try {
+    const resultados = await Promise.all([ajustarPosicao(x, y, z), recarregar()]);
+    let novasCoordenadas = resultados[0] ;
+    console.log(`Arma ajustada para as coordenadas (${novasCoordenadas[0]}, ${novasCoordenadas[1]}, ${novasCoordenadas[2]})`);
+    console.log(resultados[1]);
+    let coordenadasTiro = await atirar(...novasCoordenadas);
+    console.log(`Começando a atirar nas coordenadas (${coordenadasTiro[0]}, ${coordenadasTiro[1]}, ${coordenadasTiro[2]})`);   
+  } catch (erro) {
+    console.log(erro);
+  }
 }
 
 moverAtirando(20, 30, 91);

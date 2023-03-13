@@ -8,22 +8,25 @@ let armaLaser = {
 }
 
 async function ajustarPosicao(x, y, z) {
-    armaLaser.posicao = [x, y, z];
-    return([x, y, z]);
+  if (z > 90 || z < -90) {
+    return Promise.reject("Angulo invalido");
+  }
+  armaLaser.posicao = [x, y, z];
+  return ([x, y, z]);
 }
 
 async function atirar(x, y, z) {
-    armaLaser.atirando = true;
-    return([x, y, z]);
+  armaLaser.atirando = true;
+  return ([x, y, z]);
 }
 
 function moverAtirando(x, y, z) {
-    ajustarPosicao(x, y, z).then(coordenadas => {
+  ajustarPosicao(x, y, z).then(coordenadas => {
     console.log(`Arma ajustada para as coordenadas (${coordenadas[0]}, ${coordenadas[1]}, ${coordenadas[2]})`);
     return atirar(...coordenadas);
   }).then(coordenadas => {
     console.log(`Começando a atirar nas coordenadas (${coordenadas[0]}, ${coordenadas[1]}, ${coordenadas[2]})`);
-  })
+  }).catch(erro => { console.log(erro); });
 }
 
-moverAtirando(20, 30, 50);
+moverAtirando(20, 30, 91);

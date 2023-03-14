@@ -4,8 +4,6 @@ class motorDecolagem {
     }
     async ligar() {
         try{
-            //onst verCarga = await this.verificarCarga();
-            //const verEscudo = await this.testarEscudo();
             const resultados = await Promise.all([await this.verificarCarga(), await this.testarEscudo()]);
             this.nave.escudo = await this.normalizarEscudo(resultados[0]);
             console.log(`${this.nave.nome} Partida autorizada: carga atual em ${this.nave.porcentagemCarga().toFixed(2)}%, escudos em ${this.nave.escudo}`);

@@ -1,5 +1,6 @@
-require("core-js");
-require("regenerator-runtime");
+//import "core-js";
+//import "regenerator-runtime";
+//import "@babel/polyfill";
 
 let armaLaser = {
   cadencia: 30,
@@ -41,4 +42,4 @@ async function moverAtirando(x, y, z) {
   }
 }
 
-moverAtirando(20, 30, 91);
+moverAtirando(50, 0, 20);
